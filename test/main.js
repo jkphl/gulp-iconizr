@@ -1,10 +1,19 @@
 'use strict';
 
+/**
+ * gulp-iconizr is a Gulp wrapper around the node-iconizr SVG + PNG icon kit creation library
+ *
+ * @see https://github.com/jkphl/gulp-iconizr
+ *
+ * @author Joschi Kuphal <joschi@kuphal.net> (https://github.com/jkphl)
+ * @copyright © 2016 Joschi Kuphal
+ * @license MIT https://raw.github.com/jkphl/gulp-iconizr/master/LICENSE
+ */
+
 var iconizr = require('../');
 var should = require('should');
 var path = require('path');
 var assert = require('stream-assert');
-// var test = require('./test-stream');
 var File = require('vinyl');
 var gulp = require('gulp');
 require('mocha');
