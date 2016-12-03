@@ -61,11 +61,11 @@ module.exports = function (config) {
         }
 
         // We don't do streams (yet)
-        // if (file.isStream()) {
-        //     this.emit('error', new Error('gulp-iconizr: Streaming not supported'));
-        //     cb();
-        //     return;
-        // }
+        if (file.isStream()) {
+            this.emit('error', new Error('gulp-iconizr: Streaming not supported'));
+            cb();
+            return;
+        }
 
         var error = null;
         try {

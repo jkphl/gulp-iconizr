@@ -42,7 +42,8 @@
     "stream-assert": "^2.0.3"
   },
   "scripts": {
-    "test": "gulp && istanbul test _mocha --report html -- test/*.js --reporter spec",
+    "test": "istanbul test _mocha --report html -- test/*.js --reporter spec",
+    "test1": "gulp && istanbul test _mocha --report html -- test/*.js --reporter spec",
     "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "engines": {
