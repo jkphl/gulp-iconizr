@@ -1,0 +1,52 @@
+{
+  "name": "gulp-iconizr",
+  "description": "SVG + PNG icon kit generator — Gulp plugin wrapping around node-iconizr that creates a CSS icon kit from a bunch of SVG files, serving them as SVG / PNG sprites or embedded data URIs along with suitable CSS / Sass / LESS / Stylus etc. stylesheet resources and a JavaScript loader for easy integration into your HTML documents",
+  "version": "0.1.0",
+  "repository": "jkphl/gulp-iconizr",
+  "author": "Joschi Kuphal <joschi@kuphal.net> (https://jkphl.is)",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "gulpplugin",
+    "gulpfriendly",
+    "icon",
+    "icons",
+    "svg",
+    "png",
+    "sprite",
+    "generator",
+    "css",
+    "sass",
+    "less",
+    "stylus",
+    "stylesheet",
+    "inline",
+    "html",
+    "vector",
+    "rwd",
+    "retina",
+    "mustache"
+  ],
+  "dependencies": {
+    "iconizr": "jkphl/node-iconizr#dev"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-jshint": "^2.0.4",
+    "istanbul": "^0.4.5",
+    "jshint": "^2.9.4",
+    "mocha": "^3.2.0",
+    "mocha-lcov-reporter": "^1.2.0",
+    "should": "^11.1.1",
+    "stream-assert": "^2.0.3"
+  },
+  "scripts": {
+    "test": "gulp && istanbul test _mocha --report html -- test/*.js --reporter spec",
+    "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
+  },
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "license": "MIT"
+}
